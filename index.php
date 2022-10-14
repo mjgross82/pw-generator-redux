@@ -23,10 +23,13 @@
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
-          ></textarea>
+         >
+        </textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                Password Length (Enter a number between 8 and 64): <input name="pwLength" type="number" min="8" max="64"><br>
+            </form>
         </div>
       </div>
     </div>

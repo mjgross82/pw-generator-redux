@@ -24,6 +24,16 @@
             placeholder="Your Secure Password"
             aria-label="Generated Password"
          >
+         <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $pwLength = $_POST['pwLength'];
+                if (empty($pwLength)) {
+                    echo "Please enter a password length.";
+                } else {
+                    echo $pwLength;
+                }
+            }
+            ?>
         </textarea>
         </div>
         <div class="card-footer">

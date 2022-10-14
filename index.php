@@ -28,7 +28,13 @@
         </div>
         <div class="card-footer">
             <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                Password Length (Enter a number between 8 and 64): <input name="pwLength" type="number" min="8" max="64"><br>
+                Password Length (Enter a number between 8 and 64):
+                <input type="number" name="pwLength" min="8" max="64"><br><br>
+                Contain lowercase letters?
+                <input type="radio" name="lower" id="lowerYes" value=1>
+                <label for="lowerYes">Yes</label> 
+                <input type="radio" name="lower" id="lowerNo" value=0>
+                <label for="lowerNo">No</label><br>
             </form>
         </div>
       </div>
